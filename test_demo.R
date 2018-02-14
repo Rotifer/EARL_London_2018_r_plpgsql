@@ -1,6 +1,10 @@
 library("testthat")
  
-source("./demo.R")
+# source("./demo.R")
 
-test_that("PostgreSQL connection is created",
-          class(pg_conn)[[1]], equals("PostgreSQLConnection"))
+# Test with > test_file("./test_demo.R")
+
+test_that("PostgreSQL connection", {
+  expect_that(class(pg_conn)[[1]], equals("PostgreSQLConnection"))
+})
+
